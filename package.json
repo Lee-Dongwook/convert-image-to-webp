@@ -16,12 +16,17 @@
   "author": "Lee-DongWook",
   "license": "ISC",
   "devDependencies": {
+    "@types/imagemin": "^9.0.0",
+    "@types/imagemin-webp": "^7.0.3",
+    "@types/node": "^22.10.2",
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
     "globby": "^14.0.2",
     "imagemin": "^9.0.0",
     "imagemin-webp": "^8.0.0",
+    "path": "^0.12.7",
     "sharp": "^0.33.5"
   }
 }
