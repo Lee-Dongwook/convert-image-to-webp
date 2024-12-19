@@ -1,15 +1,14 @@
 # convert-image-to-webp
 
-****
 Effortlessly convert your images to WebP format for optimized performance and reduced file sizes.
 
-📦 Installation
+## 📦 Installation
 
 Install the library via npm:
 
-npm install convert-image-to-webp
+`npm install convert-image-to-webp`
 
-🚀 Features
+## 🚀 Features
 
 Converts .jpg, .png, .jpeg files to WebP format.
 
@@ -19,7 +18,7 @@ Supports folder-level and file-level conversion.
 
 Easy-to-use API with minimal setup.
 
-🛠️ Usage
+## 🛠️ Usage
 
 Example: Convert a Folder of Images to WebP
 
@@ -57,9 +56,9 @@ main();
 
 ```
 
-📂 API Reference
+## 📂 API Reference
 
-optimizeFolder(folderPath: string, plugin: string): Promise<void>
+### optimizeFolder(folderPath: string, plugin: string): Promise<void>
 
 Optimizes and converts all supported images in a folder to WebP format.
 
@@ -67,7 +66,7 @@ folderPath: Path to the folder containing images.
 
 plugin: Use "webp" to convert images to WebP.
 
-optimizeImages(files: string[], plugin: string): Promise<void>
+### optimizeImages(files: string[], plugin: string): Promise<void>
 
 Optimizes and converts specific image files to WebP format.
 
@@ -75,7 +74,7 @@ files: Array of file paths to convert.
 
 plugin: Use "webp" to convert images to WebP.
 
-⚙️ Configuration
+## ⚙️ Configuration
 
 This library uses the following defaults:
 
@@ -85,29 +84,29 @@ Output quality: WebP quality set to 75.
 
 Max Width: Images larger than 5000px will trigger a warning but will not be resized.
 
-⚠️ Notes
+## ⚠️ Notes
 
 Images with unsupported formats will be skipped.
 
 Warnings will be displayed for images exceeding the maximum width.
 
-👨‍💻 Development
+## 👨‍💻 Development
 
 To contribute or set up the project locally:
 
 Clone the repository:
 
-git clone <https://github.com/yourusername/convert-image-to-webp.git>
+`git clone <https://github.com/yourusername/convert-image-to-webp.git>`
 
 Install dependencies:
 
-npm install
+`npm install`
 
 Build the project:
 
-npm run build
+`npm run build`
 
-📄 License
+## 📄 License
 
 This project is licensed under the MIT License.
 
