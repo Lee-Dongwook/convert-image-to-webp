@@ -1,6 +1,6 @@
 {
   "name": "convert-image-to-webp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A utility for optimizing images and converting to WebP",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
