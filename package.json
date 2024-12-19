@@ -1,0 +1,27 @@
+{
+  "name": "convert-image-to-webp",
+  "version": "0.1.0",
+  "description": "A utility for optimizing images and converting to WebP",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "WebP",
+    "Image",
+    "Convert"
+  ],
+  "author": "Lee-DongWook",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "globby": "^14.0.2",
+    "imagemin": "^9.0.0",
+    "imagemin-webp": "^8.0.0",
+    "sharp": "^0.33.5"
+  }
+}
