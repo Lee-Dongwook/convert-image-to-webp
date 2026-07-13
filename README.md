@@ -1,28 +1,31 @@
 # convert-image-to-webp
 
-Effortlessly convert your images to WebP format for optimized performance and reduced file sizes.
+[![npm version](https://img.shields.io/npm/v/convert-image-to-webp.svg)](https://www.npmjs.com/package/convert-image-to-webp)
+[![license](https://img.shields.io/npm/l/convert-image-to-webp.svg)](./LICENSE)
+
+Effortlessly convert your images to **WebP** for optimized performance and reduced file sizes — folder-level or file-level, with a minimal async API.
 
 ## 📦 Installation
 
-Install the library via npm:
-
-`npm install convert-image-to-webp`
+```bash
+npm install convert-image-to-webp
+```
 
 ## 🚀 Features
 
-Converts .jpg, .png, .jpeg files to WebP format.
-
-Optimizes image quality for web performance.
-
-Supports folder-level and file-level conversion.
-
-Easy-to-use API with minimal setup.
+- Converts `.jpg`, `.png`, `.jpeg` files to WebP
+- Optimizes image quality for the web (WebP quality `75` by default)
+- Folder-level and file-level conversion
+- Warns about oversized images (width > 5000px)
+- Minimal, promise-based API
 
 ## 🛠️ Usage
 
-Example: Convert a Folder of Images to WebP
+### Convert a folder of images
 
-```
+Converted files are written to a `webp/` subfolder next to each source image.
+
+```ts
 import { optimizeFolder } from "convert-image-to-webp";
 
 async function main() {
@@ -37,9 +40,9 @@ async function main() {
 main();
 ```
 
-Example: Convert Specific Files
+### Convert specific files
 
-```
+```ts
 import { optimizeImages } from "convert-image-to-webp";
 
 async function main() {
@@ -53,61 +56,61 @@ async function main() {
 }
 
 main();
-
 ```
 
 ## 📂 API Reference
 
-### optimizeFolder(folderPath: string, plugin: string): Promise<void>
+### `optimizeFolder(folderPath: string, plugin: string): Promise<void>`
 
-Optimizes and converts all supported images in a folder to WebP format.
+Recursively finds and converts all supported images in a folder.
 
-folderPath: Path to the folder containing images.
+| Parameter    | Type     | Description                                            |
+| ------------ | -------- | ------------------------------------------------------ |
+| `folderPath` | `string` | Path to the folder containing images.                  |
+| `plugin`     | `string` | `"webp"` to convert to WebP, or `"sharp"` to optimize. |
 
-plugin: Use "webp" to convert images to WebP.
+Throws if `folderPath` does not exist.
 
-### optimizeImages(files: string[], plugin: string): Promise<void>
+### `optimizeImages(files: string[], plugin: string): Promise<void>`
 
-Optimizes and converts specific image files to WebP format.
+Converts a specific list of image files.
 
-files: Array of file paths to convert.
-
-plugin: Use "webp" to convert images to WebP.
+| Parameter | Type       | Description                                            |
+| --------- | ---------- | ------------------------------------------------------ |
+| `files`   | `string[]` | Array of file paths to convert.                        |
+| `plugin`  | `string`   | `"webp"` to convert to WebP, or `"sharp"` to optimize. |
 
 ## ⚙️ Configuration
 
-This library uses the following defaults:
+Current defaults (not yet configurable):
 
-Supported formats: .jpg, .png, .jpeg
-
-Output quality: WebP quality set to 75.
-
-Max Width: Images larger than 5000px will trigger a warning but will not be resized.
+| Setting           | Value                                                     |
+| ----------------- | --------------------------------------------------------- |
+| Supported formats | `.jpg`, `.png`, `.jpeg`                                   |
+| WebP quality      | `75`                                                      |
+| Max width         | Images wider than `5000px` trigger a warning (no resize). |
 
 ## ⚠️ Notes
 
-Images with unsupported formats will be skipped.
-
-Warnings will be displayed for images exceeding the maximum width.
+- Unsupported file formats are skipped with a console message.
+- Warnings are printed for images exceeding the maximum width; they are **not** resized.
 
 ## 👨‍💻 Development
 
-To contribute or set up the project locally:
+```bash
+# Clone
+git clone https://github.com/Lee-Dongwook/convert-image-to-webp.git
+cd convert-image-to-webp
 
-Clone the repository:
+# Install
+npm install
 
-`git clone https://github.com/Lee-Dongwook/convert-image-to-webp.git`
+# Build
+npm run build
+```
 
-Install dependencies:
-
-`npm install`
-
-Build the project:
-
-`npm run build`
+Contributions are welcome — feel free to open an [issue](https://github.com/Lee-Dongwook/convert-image-to-webp/issues) or a pull request.
 
 ## 📄 License
 
-This project is licensed under the MIT License.
-
-Made with ❤️ by Lee-DongWook
+Licensed under the [MIT License](./LICENSE).
