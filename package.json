@@ -4,6 +4,11 @@
   "description": "A utility for optimizing images and converting to WebP",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"
@@ -15,6 +20,14 @@
   ],
   "author": "Lee-DongWook",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lee-Dongwook/convert-image-to-webp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lee-Dongwook/convert-image-to-webp/issues"
+  },
+  "homepage": "https://github.com/Lee-Dongwook/convert-image-to-webp#readme",
   "devDependencies": {
     "@types/imagemin": "^9.0.0",
     "@types/imagemin-webp": "^7.0.3",
@@ -22,11 +35,9 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "fs": "^0.0.1-security",
     "globby": "^14.0.2",
     "imagemin": "^9.0.0",
     "imagemin-webp": "^8.0.0",
-    "path": "^0.12.7",
     "sharp": "^0.33.5"
   }
 }

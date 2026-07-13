@@ -96,7 +96,7 @@ To contribute or set up the project locally:
 
 Clone the repository:
 
-`git clone <https://github.com/yourusername/convert-image-to-webp.git>`
+`git clone https://github.com/Lee-Dongwook/convert-image-to-webp.git`
 
 Install dependencies:
 
