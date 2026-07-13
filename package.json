@@ -11,6 +11,10 @@
   ],
   "scripts": {
     "build": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -29,10 +33,18 @@
   },
   "homepage": "https://github.com/Lee-Dongwook/convert-image-to-webp#readme",
   "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@eslint/js": "^10.0.1",
     "@types/imagemin": "^9.0.0",
     "@types/imagemin-webp": "^7.0.3",
     "@types/node": "^22.10.2",
-    "typescript": "^5.7.2"
+    "eslint": "^10.7.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.7.0",
+    "prettier": "^3.9.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.63.0"
   },
   "dependencies": {
     "globby": "^14.0.2",
