@@ -81,6 +81,8 @@ export async function optimizeImages(files: string[], plugin: string) {
  */
 
 export async function optimizeFolder(folderPath: string, plugin: string) {
+  warnedFiles = [];
+
   if (!fs.existsSync(folderPath)) {
     throw new Error(`폴더가 존재하지 않습니다: ${folderPath}`);
   }

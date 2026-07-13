@@ -87,6 +87,7 @@ function optimizeImages(files, plugin) {
  */
 function optimizeFolder(folderPath, plugin) {
     return __awaiter(this, void 0, void 0, function* () {
+        warnedFiles = [];
         if (!fs_1.default.existsSync(folderPath)) {
             throw new Error(`폴더가 존재하지 않습니다: ${folderPath}`);
         }
