@@ -1,1 +1,4 @@
 node_modules
+
+# Build output — rebuilt on publish via prepublishOnly, shipped through the "files" field
+dist

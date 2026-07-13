@@ -33,5 +33,5 @@ Key points when editing `convertToWebp.ts`:
 
 ## Constraints
 
-- `tsconfig.json` targets ES6 / CommonJS with `strict` on. `dist/` is committed to the repo (not gitignored) as well as being the publish artifact — rebuild and commit it when changing source.
+- `tsconfig.json` targets ES6 / CommonJS with `strict` on. `dist/` is the build output: it is **gitignored** (not committed) and produced fresh by `prepublishOnly` before publishing, then shipped via the `files` field. Rebuild locally with `npm run build` to verify changes; do not commit `dist/`.
 - Do not add `fs` or `path` as dependencies. They are Node built-ins; earlier versions had bogus npm packages of those names in `dependencies`, which were intentionally removed.
