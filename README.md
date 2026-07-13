@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/convert-image-to-webp.svg)](https://www.npmjs.com/package/convert-image-to-webp)
 [![license](https://img.shields.io/npm/l/convert-image-to-webp.svg)](./LICENSE)
+[![good first issues](https://img.shields.io/github/issues/Lee-Dongwook/convert-image-to-webp/good%20first%20issue?label=good%20first%20issues&color=7057ff)](https://github.com/Lee-Dongwook/convert-image-to-webp/labels/good%20first%20issue)
 
 Effortlessly convert your images to **WebP** for optimized performance and reduced file sizes — folder-level or file-level, with a minimal async API.
 
@@ -109,7 +110,7 @@ npm install
 npm run build
 ```
 
-Contributions are welcome — feel free to open an [issue](https://github.com/Lee-Dongwook/convert-image-to-webp/issues) or a pull request.
+Contributions are welcome! New here? Check out the [**good first issues**](https://github.com/Lee-Dongwook/convert-image-to-webp/labels/good%20first%20issue) and see [CONTRIBUTING.md](./CONTRIBUTING.md) to get started. Feel free to open an [issue](https://github.com/Lee-Dongwook/convert-image-to-webp/issues) or a pull request.
 
 ## 📄 License
 
