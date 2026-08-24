@@ -65,6 +65,10 @@ export async function optimizeImages(files: string[], plugin: string) {
           destination: outputFolder,
           plugins: [imageminWebp({ quality: 75 })],
         });
+      } else {
+        throw new Error(
+          `Unknown plugin '${plugin}'. Supported values: 'sharp', 'webp'.`,
+        );
       }
     } catch (error) {
       console.error(`Error processing file: ${filePath}`, error);
